@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <style>body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+
+.form-container {
+  width: 400px;
+  padding: 20px;
+  background-color: #bdfed6;
+  border-radius: 10px;
+  box-shadow: 10px 20px 10px 5xp rgba(0, 0, 0, 0.1);
+}
+
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.or{
+  text-align: center;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:  #326c49;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width:95%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color:  #355341;
+}
+
+.btn-primary:hover {
+  background-color:#355341;
+}
+
+.container::before {
+  content: '';
+ 
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #FF7C00, #FF9F1C);
+  z-index: -1;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+</style>
+</head>
+<body>
+  <script>
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  var username = document.getElementById("signupUsername").value;
+  var email = document.getElementById("signupEmail").value;
+  var password = document.getElementById("signupPassword").value;
+  var confirmPassword = document.getElementById("confirmPassword").value;
+
+  // Perform validation (e.g., check if all fields are filled and passwords match)
+  if (username && email && password && confirmPassword && password === confirmPassword) {
+    alert("Sign up successful!");
+    // Redirect to another page
+    window.location.href = "welcome.html";
+  } else {
+    alert("Please fill in all fields and make sure the passwords match.");
+  }
+});
+
+</script>
+    <div class="form-container">
+      <form id="signupForm" class="signup-form">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+          <label for="signupUsername">Username</label>
+          <input type="text" id="signupUsername" name="signupUsername" required>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" name="signupEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="signupPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <p class ='or'>Or</p>
+        <p>Already have an account?<a href="file:///D:/farm/login2.html">Log in</a></p>
+       
+      </form>
+    </div>
+  </div>
+
+
+</body>
+</html>

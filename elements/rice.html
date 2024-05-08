@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FARMAZON</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script> 
+<style>
+   
+  
+  header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background: black;
+  }
+  .heading ul {
+    display: flex;
+  }
+  .logo a {
+    color: white;
+    transition-duration: 1s;
+    font-weight: 800;
+  }
+  .logo a:hover {
+    color: rgb(240, 197, 6);
+    transition-duration: 1s;
+  }
+  .heading ul li {
+    list-style: none;
+  }
+  .heading ul li a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    color: white;
+    margin: 2px 14px;
+    font-size: 18px;
+    transition-duration: 1s;
+  }
+  .heading ul li a:active {
+    color: red;
+  }
+  .heading ul li a:hover {
+    color: rgb(7, 243, 129);
+    transition-duration: 1s;
+  }
+  
+  .heading ul li a::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition-duration: 1s;
+  }
+  .heading ul li a:hover::before {
+    width: 100%;
+    transition-duration: 1s;
+    background-color: rgb(54, 243, 7);
+  }
+  #input {
+    height: 30px;
+    width: 300px;
+    text-decoration: none;
+    border: 0px;
+    padding: 5px;
+  }
+  .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  ion-icon {
+    width: 30px;
+    height: 40px;
+    background-color: white;
+    color: black;
+  }
+  ion-icon:hover {
+    cursor: pointer;
+  }
+  .search a {
+    display: flex;
+  }
+  header a ion-icon {
+    position: relative;
+    right: 3px;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items:center;
+    color: white;
+  }
+  
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+  }
+  .social-media a {
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+  }
+  .social-media a ion-icon {
+    color: white;
+    background-color: black;
+  }
+  .social-media a:hover ion-icon {
+    color: red;
+    transform: translateY(5px);
+  }
+  .footer2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+  }
+  .footer0 {
+    font-weight: 1200;
+    transition-duration: 1s;
+  }
+  .footer0:hover {
+    color: rgb(243, 168, 7);
+  }
+  .footer2 .heading {
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .footer3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer2 .heading:hover {
+    color: rgb(243, 168, 7);
+  }
+  .footer2 .div:hover {
+    transform: scale(1.05);
+  }
+  .footer3 h4 {
+    margin: 0 10px;
+  }
+  .footer2 div {
+    margin: 10px;
+  }
+  .menu {
+    visibility: hidden;
+  }
+  .heading1 .ham:active {
+    color: red;
+  }
+  .items {
+    overflow: hidden;
+  }
+  .ham,
+  .close {
+    cursor: pointer;
+  }
+  .section {
+   width: 500px;
+   height:700px;
+   margin: 30px;
+   
+  }
+  .itemimage img {
+    width: 502px;
+    height: 598px;
+    border-radius: 20px;
+    margin: 50px;
+}
+  
+  .container {
+    width:426px;
+    height: 500px;
+    position:absolute;
+    top: 136px;
+    right:288px;
+   
+  }
+  .body{
+    width:900px;
+    height:1550px;
+
+  }
+  .buy input{
+    background-color: orange;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    color:#ffff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 20px 10px 5px #0000;
+   
+}
+.buy{
+  position:relative;
+  bottom: 36px;
+  left:57px;
+ 
+}
+.about{
+  width: 450px;
+  height: 420px;
+  font-size:larger ;
+  line-height: 33px ;
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="#">FARMAZON</a></div>
+    <div class="menu">
+      <a href="#">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="#" class="under">OUR PRODUCTS</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="#" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+
+      <a href=""><input type="text" placeholder="search products" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      </a>
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="#" class="under">OUR PRODUCTS</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="#" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+  <div class="section">
+     <div class="itemimage"><img src="https://media.istockphoto.com/id/671580286/photo/rice.jpg?s=612x612&w=0&k=20&c=Eo4qfXQVximdCyp5OBfDEi5eObBM17zphPv_V_DOuOg=" alt=""></div>
+    </div>
+    <div class="container">
+        <div class="name"><h2>Rice</h2></div>
+        <div class="price"><h2>Rs.60/-</h2></div>
+        <p>best before ~ 48 weeks</p>
+        <div class ="about"><ul>
+          <li>COUNTRY OF ORIGIN:Southeast Asia, particularly in China and India.</li>
+          <li>SCIENTIFIC NAME: Oryza sativa</li>
+          <li>NUTRITIOUS CONTENT:A staple food providing carbohydrates, low in fat, vitamins B-complex, and minerals like iron and magnesium.</li>
+          <li>GOOD FOR: Being a primary source of energy, supporting digestive health, providing essential nutrients, and serving as a dietary staple for a large portion of the world's population. Rice is a versatile grain used in various cuisines and comes in different varieties such as white, brown, basmati, and jasmine.</li>
+        </ul>
+      </div>
+        <select>Quantity
+          <option value="Qty">Qty</option>
+          <option value="Qty">1 kg</option>
+          <option value="Qty">2 kg</option>
+          <option value="Qty">3 kg</option>
+          <option value="Qty">4 kg</option>
+          <option value="Qty">5 kg</option>
+          <option value="Qty">6 kg</option>
+          
+
+          </select>
+
+    <div class="buy"><input type="submit" value="Buy now"></div>
+      </div>
+    <footer>
+  <div class="footer0">
+    <h1>FARMAZON</h1>
+  </div>
+  <div class="footer1 ">
+    Connect with us at<div class="social-media">
+      <a href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <div class="footer2">
+    <div class="product">
+      <div class="heading">Products</div>
+      <div class="div">Sell your Products</div>
+      <div class="div">Advertise</div>
+      <div class="div">Pricing</div>
+      <div class="div">Product Buisness</div>
+
+    </div>
+    <div class="services">
+      <div class="heading">Services</div>
+      <div class="div">Return</div>
+      <div class="div">Cash Back</div>
+      <div class="div">Affiliate Marketing</div>
+      <div class="div">Others</div>
+    </div>
+    <div class="Company">
+      <div class="heading">Company</div>
+      <div class="div">Complaint</div>
+      <div class="div">Careers</div>
+      <div class="div">Affiliate Marketing</div>
+      <div class="div">Support</div>
+    </div>
+    <div class="Get Help">
+      <div class="heading">Get Help</div>
+      <div class="div">Help Center</div>
+      <div class="div">Privacy Policy</div>
+      <div class="div">Terms</div>
+      <div class="div">Login</div>
+    </div>
+  </div>
+  <div class="footer3">Copyright © <h4>FARMAZON</h4> 2021-2028</div>
+</footer>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="./ecommerce.js"></script>
+
+</body>
+
+</html>
